@@ -4,12 +4,13 @@ on:
     branches:
       - master
 jobs:
-  deploy:
+  build:
     name: Deploy to Production
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkou code
+        uses: actions/checkout@v2
 
       - name: Build and push image to DockerHub
         uses: docker/build-push-action@v1.1.0
