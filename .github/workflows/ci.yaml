@@ -3,7 +3,6 @@ on:
   pull_request:
     branches:
       - develop
-      - master
 jobs:
   validate:
     name: Validate OpenAPI documentation
