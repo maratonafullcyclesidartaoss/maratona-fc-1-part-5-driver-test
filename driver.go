@@ -128,5 +128,6 @@ func main() {
 	u := "http://" + os.Getenv("SWAGGER_HOST") + ":" + os.Getenv("SWAGGER_PORT") + "/docs/doc.json"
 
 	r.Get("/docs/*", httpSwagger.Handler(httpSwagger.URL(u)))
+
 	http.ListenAndServe(":8081", r)
 }
